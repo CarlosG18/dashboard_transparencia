@@ -2,9 +2,9 @@ import requests
 import pandas as pd
 import streamlit as st
 
-PIPEFY_TOKEN = ""
-PIPEFY_URL = ""
-PIPE_ID = ""
+PIPEFY_TOKEN = "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3NDY1MzQ1NzgsImp0aSI6ImUyZjRhYzc4LWNkMDAtNDc2Mi04MTAwLTgwYjQ1ZjYwNWQxNCIsInN1YiI6MzA0NzUxMTc1LCJ1c2VyIjp7ImlkIjozMDQ3NTExNzUsImVtYWlsIjoiY2FybG9zZ2FicmllbEBlamVjdHVmcm4uY29tLmJyIn19.g-dg4RVfW7-Mvl5K11dtT9sKX-sSWqThnvOZt2X3MsqoLcGazET6NxHKEcKO2mPm_l76hoqN-TuaAYJ7atD4Dw"
+PIPEFY_URL = "https://app.pipefy.com/pipes/305708346"
+PIPE_ID = "305708346"
 
 st.title("📌 Dashboard Pipefy")
 
@@ -19,31 +19,24 @@ def get_data():
         "Content-Type": "application/json"
     }
     query = f"""
-    {{
-      pipe(id: {PIPE_ID}) {{
-        name
-        cards {{
+      {{
+        allCards(pipeId: {PIPE_ID}, first: 50) {{
           edges {{
             node {{
               id
               title
-              created_at
-              current_phase {{
-                name
-              }}
+              createdAt
             }}
           }}
         }}
       }}
-    }}
     """
     response = requests.post(url, json={"query": query}, headers=headers)
-    cards = response.json()["data"]["pipe"]["cards"]["edges"]
+    print(response.json())
+    cards = response.json()["data"]["allCards"]["edges"]
     data = [{
         "ID": c["node"]["id"],
         "Título": c["node"]["title"],
-        "Criado em": c["node"]["created_at"],
-        "Fase Atual": c["node"]["current_phase"]["name"]
     } for c in cards]
     return pd.DataFrame(data)
 
