@@ -1,5 +1,5 @@
 name: "🐞 Correção de Bug"
-description: Reporte um erro ou comportamento inesperado.
+description: Reporte um erro, comportamento inesperado ou falha no sistema.
 title: "[Bug] Descreva brevemente o problema"
 labels: ["Bug"]
 body:
@@ -7,20 +7,39 @@ body:
     id: descricao
     attributes:
       label: ⚠️ Descrição do Bug
-      description: O que está acontecendo de errado?
-      placeholder: Exemplo: Ao clicar em "Salvar", nada acontece.
+      description: Explique claramente o problema que você está enfrentando.
+      placeholder: Exemplo: Ao clicar em "Salvar", a aplicação não responde.
+    validations:
+      required: true
+
   - type: textarea
     id: passos
     attributes:
       label: 🔁 Passos para Reproduzir
-      description: Como podemos reproduzir o erro?
+      description: Liste os passos que levam ao problema.
+      placeholder: |
+        1. Vá para a página X
+        2. Clique no botão Y
+        3. Observe o erro Z
+    validations:
+      required: true
+
   - type: textarea
     id: esperado
     attributes:
       label: ✅ Comportamento Esperado
-      description: O que deveria acontecer?
+      description: O que você esperava que acontecesse?
+      placeholder: Exemplo: O sistema deveria salvar o registro corretamente.
+
   - type: textarea
     id: ambiente
     attributes:
       label: 💻 Ambiente
-      description: Informe detalhes (sistema operacional, versão, navegador etc.)
+      description: Detalhes sobre o ambiente onde o bug ocorreu.
+      placeholder: Exemplo: Ubuntu 22.04, Python 3.11, navegador Firefox 140.
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: 📸 Evidências
+      description: Adicione prints, logs ou vídeos que ajudem a entender o problema.
