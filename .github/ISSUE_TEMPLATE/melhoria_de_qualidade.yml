@@ -1,0 +1,21 @@
+name: "🧩 Melhoria de Qualidade"
+description: Sugira melhorias relacionadas à performance, testes ou boas práticas.
+title: "[Qualidade] Descreva brevemente a sugestão"
+labels: ["Qualidade"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: 🧠 Descrição
+      description: Qual aspecto de qualidade você deseja melhorar?
+      placeholder: Exemplo: Melhorar cobertura de testes do módulo de pagamentos.
+  - type: textarea
+    id: justificativa
+    attributes:
+      label: 💡 Justificativa
+      description: Por que essa melhoria é importante?
+  - type: textarea
+    id: contexto
+    attributes:
+      label: 📚 Contexto adicional
+      description: Alguma informação extra, referência ou exemplo?
