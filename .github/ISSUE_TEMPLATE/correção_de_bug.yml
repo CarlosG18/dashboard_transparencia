@@ -1,0 +1,26 @@
+name: "🐞 Correção de Bug"
+description: Reporte um erro ou comportamento inesperado.
+title: "[Bug] Descreva brevemente o problema"
+labels: ["Bug"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: ⚠️ Descrição do Bug
+      description: O que está acontecendo de errado?
+      placeholder: Exemplo: Ao clicar em "Salvar", nada acontece.
+  - type: textarea
+    id: passos
+    attributes:
+      label: 🔁 Passos para Reproduzir
+      description: Como podemos reproduzir o erro?
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ✅ Comportamento Esperado
+      description: O que deveria acontecer?
+  - type: textarea
+    id: ambiente
+    attributes:
+      label: 💻 Ambiente
+      description: Informe detalhes (sistema operacional, versão, navegador etc.)
