@@ -1,0 +1,6 @@
+[
+  { "name": "Funcionalidade", "color": "1D76DB", "description": "Novas funcionalidades ou melhorias" },
+  { "name": "Bug", "color": "D73A4A", "description": "Erros e falhas do sistema" },
+  { "name": "Qualidade", "color": "0E8A16", "description": "Melhorias de performance, testes ou boas práticas" },
+  { "name": "Outros", "color": "6E5494", "description": "Assuntos gerais" }
+]
