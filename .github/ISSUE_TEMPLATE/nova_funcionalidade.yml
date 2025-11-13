@@ -8,14 +8,4 @@ body:
     attributes:
       label: 🧠 Descrição
       description: Descreva claramente a funcionalidade desejada.
-      placeholder: Exemplo: Implementar autenticação via Google.
-  - type: textarea
-    id: comportamento_esperado
-    attributes:
-      label: ✅ Comportamento Esperado
-      description: O que você espera que aconteça?
-  - type: textarea
-    id: contexto
-    attributes:
-      label: 📚 Contexto adicional
-      description: Alguma informação extra, link ou referência?
+
