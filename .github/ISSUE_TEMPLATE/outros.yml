@@ -1,0 +1,15 @@
+name: "🗂️ Outros"
+description: Questões gerais que não se encaixam nas categorias anteriores.
+title: "[Outros] Descreva brevemente o assunto"
+labels: ["Outros"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: 🧠 Descrição
+      description: Explique brevemente o motivo da issue.
+  - type: textarea
+    id: contexto
+    attributes:
+      label: 📚 Contexto adicional
+      description: Alguma informação extra, link ou referência?
