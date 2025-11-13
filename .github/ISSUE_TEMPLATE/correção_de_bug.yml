@@ -32,13 +32,6 @@ body:
       placeholder: "Exemplo: O sistema deveria salvar o registro corretamente."
 
   - type: textarea
-    id: ambiente
-    attributes:
-      label: "💻 Ambiente"
-      description: "Detalhes sobre o ambiente onde o bug ocorreu."
-      placeholder: "Exemplo: Ubuntu 22.04, Python 3.11, navegador Firefox 140."
-
-  - type: textarea
     id: evidencias
     attributes:
       label: "📸 Evidências"
